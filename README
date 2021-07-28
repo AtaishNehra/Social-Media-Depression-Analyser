@@ -1,0 +1,22 @@
+Problem statement: Can a Reddit bot get help for people fighting depression and other mental health problems?
+
+Details: Reddit has this feature in which a user can get help for another user (connect them with trained Crisis Counselors) if they suspect the person is experiencing suicidal thoughts, depression, or other mental health issues after reading their post or comment. Can this process be automated? We can try to achieve this through sentiment analysis, our algorithm must be sufficiently context-aware so that it can differentiate between the person talking about themselves, some other person, or the general topic. It should also be able to understand the intensity of the emotion and determine if it is necessary to get help for the specific user. This can especially be useful during the pandemic, as there is an increasing number of such posts on Reddit and other social media. It is not always possible for humans to read all the posts in time, so this kind of bot can be quite useful.
+
+What will be done:
+The dataset collected by us will be from different Reddit or other social media posts.
+This data can be manually filtered and labeled by us to create the training and test sets.
+The machine learning model can be trained to classify the posts based on the context and the intensity.
+This can be integrated with a Reddit bot that reads posts or comments automatically and performs this operation.
+
+
+Timeline:
+
+(4th Aug) Step 1: projects review 
+
+(4th Aug) Step 2: project pipeline
+
+(11th Aug) Step 3: Model design and training and parameters optimization 
+
+(18th Aug) Step 4: Running the whole code by joining all the bits and pieces
+
+(25th Aug) Step 5: Deploying the project
