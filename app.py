@@ -22,7 +22,8 @@ e1.pack()
 post = 2
 def getPost():
     for widgets in dummy_frame.winfo_children():
-      widgets.destroy()
+      if(widgets.winfo_class() == 'Label'):
+        widgets.destroy()
     global post
     post = predict(e1.get("1.0",'end-1c'))
     text = "Prediction: "
@@ -30,7 +31,7 @@ def getPost():
         text += 'Depressed.'
     else:
         text += 'Not Depressed!'
-    d1 = Label(dummy_frame,text=text,bg='black')
+    d1 = Label(dummy_frame,text=text,bg='black',font=('Arial',20))
     d1.pack(side='bottom')
 
 def predict(text):
