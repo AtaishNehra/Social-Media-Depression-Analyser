@@ -1,0 +1,8 @@
+Flask
+pandas
+regex
+tensorflow
+pyspellchecker
+spacy
+click
+Exit
