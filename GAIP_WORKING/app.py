@@ -60,8 +60,8 @@ def get_ans(text_query):
         a = model.predict(X1)
         print(a)
         if(a[0][0] > a[0][1]):
-            return 'The entered text shows no signs of depression!' #pd.Dataframe.from_dict({'prediction':0})
-        return 'The entered text shows signs of depression.' #pd.Dataframe.from_dict({'prediction':1})
+            return 0 #pd.Dataframe.from_dict({'prediction':0})
+        return 1 #pd.Dataframe.from_dict({'prediction':1})
     except BaseException as e:
         print('failed on_status,', str(e))
         time.sleep(3)
@@ -91,6 +91,11 @@ def get_data():
 # get the data for the requested query
 @app.route('/success/<name>')
 def success(name):
-    return "<xmp>" + str(requestResults(name)) + " </xmp> "
+    if(requestResults(name) == 0):
+        return render_template('NotDepressed.html')
+    else:
+        return render_template('Depressed.html')
+    #return "<xmp>" + str(requestResults(name)) + " </xmp> "
 
-app.run(debug=True)
+if(__name__ == '__main__'):
+    app.run(debug=True)
