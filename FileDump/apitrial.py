@@ -93,4 +93,5 @@ def get_data():
 def success(name):
     return "<xmp>" + str(requestResults(name)) + " </xmp> "
 
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host="localhost", port=80, debug=True)
