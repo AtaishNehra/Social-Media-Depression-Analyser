@@ -11,9 +11,9 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 import spacy
 import pandas as pd
 
-model = keras.models.load_model('Models/FinalModel.h5')
+model = keras.models.load_model('../Models/FinalModel.h5')
 
-df = pd.read_csv('Datasets/MainData.csv')
+df = pd.read_csv('../Datasets/MainData.csv')
 df = df.dropna()
 
 # load the pipeline object
@@ -74,7 +74,7 @@ def requestResults(name):
 
 
 # start flask
-app = Flask('TrialAPI', template_folder='templates/')
+app = Flask('TrialAPI', template_folder='../templates/')
 
 # render default webpage
 @app.route('/')
