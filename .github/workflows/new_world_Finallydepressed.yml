@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'Finallydepressed'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_658df037b1464fbf93459a2673b120bf }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_74f1919d249a4ac3b7564dd46187ec36 }}
